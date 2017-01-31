@@ -7,6 +7,23 @@ import java.util.Arrays;
  */
 public class PikadSoned {
 
-    String[] naide = {"kaalikas", "joonas", "maakera", "homeros", "mandel"}; // vastus on 3
+    public static void main(String[] args) {
 
+
+        String[] naide = {"kaalikas", "joonas", "maakera", "homeros", "mandel"}; // vastus on 3
+
+        int tahtedearv = 0;
+        for (int i = 0; i < naide.length; i++) {
+            tahtedearv = tahtedearv + naide[i].length();
+        }
+        int keskminetahtedearvsonas = tahtedearv / naide.length;
+
+        int counter = 0;
+        for (int i = 0; i < naide.length; i++) {
+            if (naide[i].length() > keskminetahtedearvsonas) {
+                counter++;
+            }
+        }
+        System.out.println("Selliseid sõnu on " + counter);
+    }
 }

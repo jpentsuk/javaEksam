@@ -21,6 +21,40 @@ import java.util.Arrays;
  */
 public class LoodeNurk {
 
+    public static void main(String[] args) {
+        int [] [] maatriks = new int [9] [9];
+        int a = 1;
+        int abiline=1;
+        int c = 1;
+        int d = 1;
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j <9 ; j++) {
+
+                if(a>abiline)
+                {
+                    maatriks[i][j]=c;
+                    System.out.println("kordamine");
+
+                }
+                else
+                {
+                    System.out.println("suurendamine");
+                    maatriks[i][j]=d;
+                    d++;
+
+                }
+                a++;
+
+            }
+            a=1;
+            d=1;
+            abiline++;
+            c++;
+
+        }
+        printMaatriks(maatriks);
+    }
+
     // Lihtsalt abiline meetod, et maatriksit välja printida
     private static void printMaatriks(int[][] laud) {
         for (int i = 0; i < laud.length; i++) {

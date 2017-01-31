@@ -16,6 +16,32 @@ import java.util.Arrays;
  */
 public class Sukrist {
 
+    public static void main(String[] args) {
+        int [] [] suk = new int [10] [10];
+        int a = 10;
+        int b = 6;
+        for (int i = 0; i <10 ; i++) {
+            for (int j = 0; j <10 ; j++) {
+                if(i%2==0) // kui i on paarisarv
+                {
+                    suk[i][j] = a;
+                    a--;
+                }
+                else
+                {
+                    suk[i][j] = b;
+                    b++;
+                }
+
+            }
+            a+=15;
+            b+=5;
+
+        }
+
+        printMaatriks(suk);
+    }
+
     // Lihtsalt abiline meetod, et maatriksit välja printida
     private static void printMaatriks(int[][] laud) {
         for (int i = 0; i < laud.length; i++) {

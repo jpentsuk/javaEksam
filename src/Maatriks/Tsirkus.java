@@ -16,6 +16,30 @@ import java.util.Arrays;
  */
 public class Tsirkus {
 
+    public static void main(String[] args) {
+        int [] [] lauamang = new int[10][10];
+        int arv = 100;
+        int arv2 = 96;
+        for (int i = 0; i <10 ; i++) {
+            for (int j = 0; j <10 ; j++) {
+                if(i%2==0)// kui i on paarisarv
+                {
+                    lauamang[i][j]=arv;
+                    arv--;
+                }
+                else
+                {
+                    lauamang[i][j]=arv2;
+                    arv2++;
+                }
+
+            }
+            arv-=5;
+            arv2-=15;
+        }
+        printMaatriks(lauamang);
+    }
+
     // Lihtsalt abiline meetod, et maatriksit välja printida
     private static void printMaatriks(int[][] laud) {
         for (int i = 0; i < laud.length; i++) {
