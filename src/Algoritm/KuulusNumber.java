@@ -1,6 +1,7 @@
 package Algoritm;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Antud on int[] massiiv. Eemalda kõik nr 3 väärtused ja leia millist numbrit esineb kõige siis rohkem?
@@ -19,6 +20,7 @@ public class KuulusNumber {
                 list.add(naide[i]);
             }
         }
+        Collections.sort(list);
         for (int i = 0; i <list.size()-1 ; i++) {
             if(list.get(i)==list.get(i+1))
             {
