@@ -24,7 +24,7 @@ public class KuulusNumber {
         for (int i = 0; i <list.size()-1 ; i++) {
             if(list.get(i)==list.get(i+1))
             {
-                System.out.println("kõige rohkem on numbreid " + list.get(i));
+                System.out.println("aga kõige rohkem on numbreid " + list.get(i));
             }
         }
     }
